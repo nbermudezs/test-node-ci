@@ -11,6 +11,6 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('travis', ['uglify']);
+  grunt.registerTask('build', ['uglify']);
 
 };
