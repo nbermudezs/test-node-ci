@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nbermudezs/test-node-ci/issues"
   },
-  "homepage": "https://github.com/nbermudezs/test-node-ci"
+  "homepage": "https://github.com/nbermudezs/test-node-ci",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
 }
