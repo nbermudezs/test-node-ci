@@ -18,5 +18,9 @@
   "homepage": "https://github.com/nbermudezs/test-node-ci",
   "dependencies": {
     "express": "^4.12.3"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^0.9.1"
   }
 }
