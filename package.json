@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-contrib-uglify": "^0.9.1"
+    "grunt-contrib-uglify": "^0.9.1",
+    "jest-cli": "^0.4.2"
   }
 }
