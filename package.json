@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest; npm run e2e-chrome; npm run e2e-firefox",
     "postinstall": "echo postinstall time; ./node_modules/grunt-cli/bin/grunt build",
-    "protractor": "node node_modules/protractor/bin/protractor tests/protractor.conf.js --verbose & node node_modules/protractor/bin/protractor tests/protractor-ff.conf.js --verbose"
+    "e2e-chrome": "node node_modules/protractor/bin/protractor tests/protractor.conf.js --verbose",
+    "e2e-firefox": "node node_modules/protractor/bin/protractor tests/protractor-ff.conf.js --verbose"
   },
   "repository": {
     "type": "git",
