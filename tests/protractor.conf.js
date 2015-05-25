@@ -38,7 +38,6 @@ var config = {
 };
 
 if (process.env.TRAVIS_BUILD_NUMBER) {
-  config.seleniumAddress = 'http://localhost:4445/wd/hub';
   config.sauceUser = process.env.SAUCE_USERNAME;
   config.sauceKey = process.env.SAUCE_ACCESS_KEY;
   config.capabilities = {
