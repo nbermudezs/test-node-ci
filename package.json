@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "postinstall": "echo postinstall time; ./node_modules/grunt-cli/bin/grunt build"
+    "postinstall": "echo postinstall time; ./node_modules/grunt-cli/bin/grunt build",
+    "protractor": "node node_modules/protractor/bin/protractor tests/protractor.conf.js --verbose & node node_modules/protractor/bin/protractor tests/protractor-ff.conf.js --verbose"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,13 @@
   "homepage": "https://github.com/nbermudezs/test-node-ci",
   "dependencies": {
     "express": "^4.12.3",
+    "firefox-profile": "^0.3.11",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
-    "grunt-contrib-uglify": "^0.9.1"
+    "grunt-contrib-uglify": "^0.9.1",
+    "jasmine": "^2.3.1",
+    "protractor": "^2.1.0",
+    "q": "^1.4.1"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
