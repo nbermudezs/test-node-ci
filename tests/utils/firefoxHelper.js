@@ -12,7 +12,8 @@ exports.ffProfile = function() {
   firefoxProfile.encoded(function(encodedProfile) {
     var multiCapabilities = [{
       browserName: 'firefox',
-      firefox_profile : encodedProfile
+      firefox_profile : encodedProfile,
+      name: 'E2E On Firefox'
     }];
     deferred.resolve(multiCapabilities);
   });
