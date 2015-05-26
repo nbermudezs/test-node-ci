@@ -1,36 +1,18 @@
 var helper = require('./utils/firefoxHelper.js');
+var config = require('./base.conf');
 
-var config = {
-  allScriptsTimeout: 10000,
-
-  specs: ['e2e/*.js'],
-
-  baseUrl: 'http://localhost:3000',
-
-  getMultiCapabilities: helper.ffProfile,
-
-  framework: 'jasmine',
-
-  jasmineNodeOpts: {
-    showColors: true,
-    defaultTimeoutInterval: 60000
-  },
-
-  onPrepare: function() {
-    browser.ignoreSynchronization = true;
-    require('./utils/waitReady.js');
-    require('./utils/hasClass.js');
-  }
-};
+config.getMultiCapabilities = helper.ffProfile;
 
 if (process.env.TRAVIS_BUILD_NUMBER) {
   config.sauceUser = process.env.SAUCE_USERNAME;
   config.sauceKey = process.env.SAUCE_ACCESS_KEY;
   config.capabilities = {
-    'browserName': 'firefox',
+    'browserName': 'internet explorer',
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'build': process.env.TRAVIS_BUILD_NUMBER,
-    'name': 'App Tests'
+    'platform': 'ANY',
+    'version': '11',
+    'name': 'E2E On IE'
   };
 }
 

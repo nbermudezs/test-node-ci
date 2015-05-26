@@ -9,7 +9,10 @@ app.get("/", function(req, res) {
 	res.sendFile(__dirname + "/public/index.html");
 });
 
-app.listen(app.get('port'), function() {
-	console.log( package.name + " app is running at localhost:" + app.get('port'));
-});
-module.exports = app;
+if (require.main === module) {
+  app.listen(app.get('port'), function() {
+    console.log( package.name + " app is running at localhost:" + app.get('port'));
+  });
+} else {
+  module.exports = app;
+}

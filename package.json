@@ -7,7 +7,7 @@
     "test": "jest; npm run e2e-chrome; npm run e2e-firefox; npm run e2e-ie;",
     "postinstall": "echo postinstall time; ./node_modules/grunt-cli/bin/grunt build",
     "e2e-ie": "node node_modules/protractor/bin/protractor tests/protractor-ie.conf.js --verbose",
-    "e2e-chrome": "node node_modules/protractor/bin/protractor tests/protractor.conf.js --verbose",
+    "e2e-chrome": "node node_modules/protractor/bin/protractor tests/protractor-chrome.conf.js --verbose",
     "e2e-firefox": "node node_modules/protractor/bin/protractor tests/protractor-ff.conf.js --verbose"
   },
   "repository": {

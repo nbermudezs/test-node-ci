@@ -1,32 +1,9 @@
-var config = {
-	allScriptsTimeout: 10000,
+var config = require('./base.conf');
 
-  specs: ['e2e/*.js'],
-
-  capabilities: {
-    'browserName': 'internet explorer',
-    'platform': 'ANY',
-    'version': '11'
-  },
-
-  baseUrl: 'http://localhost:3000',
-
-  framework: 'jasmine',
-
-  jasmineNodeOpts: {
-    showColors: true,
-    defaultTimeoutInterval: 60000,
-    isVerbose: true,
-    showTiming: true,
-    includeStackTrace: true
-  },
-
-  onPrepare: function() {
-    browser.manage().window().setSize(1600, 1000);
-    browser.ignoreSynchronization = true;
-    require('./utils/waitReady.js');
-    require('./utils/hasClass.js');
-  }
+config.capabilities = {
+  'browserName': 'internet explorer',
+  'platform': 'ANY',
+  'version': '11'
 };
 
 if (process.env.TRAVIS_BUILD_NUMBER) {
